@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>За горизонтом событий — Ссылки</title>
     <style>
+        /* Основной фон — глубокий космос */
         body {
             margin: 0;
             padding: 0;
@@ -15,9 +16,10 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
-        /* Звездный фон */
+        /* Эффект звезд на фоне */
         body::before {
             content: "";
             position: fixed;
@@ -31,40 +33,47 @@
             width: 90%;
             max-width: 400px;
             text-align: center;
-            margin-top: 60px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Центрирует всё содержимое внутри */
         }
 
+        /* Исправленный блок логотипа */
         .profile-img {
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            border: 2px solid #9b59b6; /* Фиолетовый акцент - цвет туманностей */
-            box-shadow: 0 0 30px rgba(155, 89, 182, 0.4);
-            margin-bottom: 20px;
+            border: 3px solid #9b59b6; /* Фиолетовое свечение */
+            box-shadow: 0 0 25px rgba(155, 89, 182, 0.5);
+            margin: 0 auto 20px auto; /* Центрирование: 0 сверху, auto по бокам */
+            display: block;
             object-fit: cover;
         }
 
         h1 {
             font-size: 24px;
-            margin-bottom: 8px;
+            margin: 0 0 10px 0;
             font-weight: 700;
-            letter-spacing: 0.5px;
             text-shadow: 0 0 15px rgba(155, 89, 182, 0.5);
         }
 
         .description {
             font-size: 15px;
             color: #d1d1d1;
-            margin-bottom: 45px;
+            margin-bottom: 40px;
             line-height: 1.4;
         }
 
+        /* Стили кнопок */
         .link-btn {
+            width: 100%; /* Кнопки на всю ширину контейнера */
+            box-sizing: border-box;
             display: block;
             text-decoration: none;
             color: white;
-            padding: 18px;
-            margin-bottom: 20px;
+            padding: 16px;
+            margin-bottom: 15px;
             border-radius: 12px;
             font-weight: 600;
             transition: all 0.3s ease;
@@ -73,15 +82,13 @@
             backdrop-filter: blur(8px);
         }
 
-        /* YouTube: Красный */
+        /* Эффекты при наведении */
         .yt { border-left: 6px solid #e74c3c; }
         .yt:hover { background: rgba(231, 76, 60, 0.2); transform: translateY(-3px); }
 
-        /* Telegram: Синий */
         .tg { border-left: 6px solid #3498db; }
         .tg:hover { background: rgba(52, 152, 219, 0.2); transform: translateY(-3px); }
 
-        /* Донат: Золотой */
         .dn { border-left: 6px solid #f1c40f; }
         .dn:hover { background: rgba(241, 196, 15, 0.2); transform: translateY(-3px); }
 
@@ -90,14 +97,14 @@
 <body>
 
     <div class="container">
-        <img src="https://i.ibb.co/6Rt6fWMr/image.png">
+        <img src="logo.png" alt="За горизонтом событий" class="profile-img">
 
         <h1>За горизонтом событий</h1>
         <p class="description">Путешествие к самым далеким уголкам Вселенной и за пределы познания 🌌</p>
 
-        <a href="https://www.youtube.com/@Space_4x" class="link-btn yt" target="_blank">📺 Наш YouTube канал</a>
-        <a href="t.me/za_gorizontom_sobutiy" class="link-btn tg" target="_blank">🚀 Сообщество в Telegram</a>
-        <a href="#" class="link-btn dn" target="_blank">💰 Поддержать экспедицию</a>
+        <a href="https://www.youtube.com/channel/UC3fCwwxXYy-aRXP6QyabrxQ" class="link-btn yt" target="_blank">📺 Наш YouTube канал</a>
+        <a href="https://t.me/твой_ник" class="link-btn tg" target="_blank">🚀 Сообщество в Telegram</a>
+        <a href="https://donatello.to/твой_ник" class="link-btn dn" target="_blank">💰 Поддержать экспедицию</a>
     </div>
 
 </body>
